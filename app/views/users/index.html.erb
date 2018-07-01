@@ -11,7 +11,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="users">
     <%= render @users %>
   </tbody>
 </table>
@@ -21,5 +21,5 @@
 <%= link_to 'New User', new_user_path %>
 
 <div id="paginator">
-  <%= paginate @users %>
+  <%= paginate @users, remote: true %>
 </div>
